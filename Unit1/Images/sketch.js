@@ -1,12 +1,12 @@
-/// <reference path="../../libs/TSDef/p5.global-mode.d.ts" /> 
+
 let i1, i2, i3;
 
 
 function setup() {
   createCanvas(500, 500);
-  i1 = loadImage("assets/art1.jpeg")
-  i2 = loadImage("assets/art2.jpeg")
-  i3 = loadImage("assets/art3.jpeg")
+  i1 = loadImage("assets/art1.jpg")
+  i2 = loadImage("assets/art2.jpg")
+  i3 = loadImage("assets/art3.jpg")
 }
 
 function draw() {
