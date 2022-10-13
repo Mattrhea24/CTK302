@@ -60,7 +60,6 @@ function mouseReleased() {
   state++;
   if (state > 4) state = 0;
 }
-
 function touchStarted() {
   getAudioContext().resume();
 }
