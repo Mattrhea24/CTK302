@@ -8,15 +8,16 @@ var ease = 0.08; // how responsive do you want this? Higher numbers mean faster 
 
 function setup() {
   createCanvas(400, 400);
-
+  i1 = loadImage("assets/Yell.jpg")
+  imageMode(CENTER);
   // code for initializing mic in.
   mic = new p5.AudioIn(); // what does "new" mean?
   mic.start();
 }
 
 function draw() {
-  background("green");
-
+  background("yellow");
+  image(i1, 300, 300, 300, 250);
   // get the sound input
   vol = mic.getLevel(); // returned level is between 0 and 1
 
