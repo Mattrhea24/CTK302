@@ -4,11 +4,14 @@ let x = 0;
 
 function setup() {
   createCanvas(500 , 500);
-
+  rectMode(CENTER);
+  ellipseMode(CENTER);
+  noStroke();
 }
 
 function draw() {
-  background(100);
+  background("orange");
+  loadFont("assets/Acme-Regular.ttf");
   textSize(128);
 text("BOOO!!!",x, 200,);
 x= x + 3;
