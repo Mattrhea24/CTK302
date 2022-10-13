@@ -1,7 +1,7 @@
 var mic;
 let vol = 0;
 let approachingVol = 0;
-
+let i1;
 // variables that you might want to tweak
 let theLoudestItGets = 0.2; // check your mic inputs and see how loud it gets, put it here.
 var ease = 0.08; // how responsive do you want this? Higher numbers mean faster response.

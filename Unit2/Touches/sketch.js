@@ -1,7 +1,13 @@
 let numberOfTouches ;
-
+let i1, i2, i3, i4;
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
+  i1 = loadImage("assets/fall.jpg")
+  i2 = loadImage("assets/winter.jpg")
+  i3 = loadImage("assets/spring.jpg")
+  i4 = loadImage("assets/summer.jpg")
+
+  imageMode(CENTER);
 }
 function draw() {
   rectMode(CENTER);
@@ -12,21 +18,30 @@ function draw() {
   switch(numberOfTouches) {
     case 0: 
       text("no one is touching the screen", 5, 22) ; 
+
       break ;
       
       case 1: 
-       text("it's kind of lonely here", 5, 22) ; 
-      // put a picture here
+       text("Ooooh Pretty Fall", 5, 22) ; 
+       image(i1, width/ 2, height/ 2 - 120, 400, 400);
+     
       break ;
       
       case 2:
-      text("two fingers are touching the screen", 5, 22) ; 
-            // put a picture here
+      text("Brrr Winter", 5, 22) ; 
+      image(i2, width/ 2, height/ 2 - 120, 400, 400);
+      
       break ;
       
       case 3:
-     text("three are touching the screen", 5, 22) ; 
-            // put a picture here
+     text("Finally Spring!", 5, 22) ; 
+     image(i3, width/ 2, height/ 2 - 120, 400, 400);
+    
+      break ;
+      case 4:
+     text("Summertime!!", 5, 22) ; 
+     image(i4, width/ 2, height/ 2 - 120, 400, 400);
+    
       break ;
     
       
