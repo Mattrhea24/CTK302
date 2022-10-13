@@ -17,6 +17,7 @@ switch (state) {
       text("It's a shame they'll never meet", width / 2, height /2);
 }
 rect(100, 100, 100, 100);
+}
 
 function mouseReleased(){
   
@@ -25,5 +26,4 @@ function mouseReleased(){
   if (state > 1) state =0;
 
 
-}
 }
