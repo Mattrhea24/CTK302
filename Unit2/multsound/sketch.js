@@ -1,4 +1,4 @@
-let state = 0;
+let state = -1;
 let s1, s2, s3;
 
 function preload() {
@@ -16,7 +16,7 @@ function draw() {
   
   switch (state) {
     case -1:
-      text("please click to beging", 100, 100);
+      text("please click to begin", 100, 100);
       break;
 
     case 0:
@@ -43,12 +43,13 @@ function draw() {
 }
 
 function mouseReleased() {
-  s1.pause();
-  s2.pause();
-  s3.pause();
+  s1.stop();
+  s2.stop();
+  s3.stop();
   state++;
   if (state > 2) state = 0;
 }
+
 function touchStarted() {
   getAudioContext().resume();
 }
