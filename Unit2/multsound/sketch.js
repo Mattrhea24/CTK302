@@ -3,8 +3,8 @@ let s1, s2, s3;
 
 function preload() {
   s1= loadSound("assets/happyrock.mp3");
-  s1= loadSound("assets/hipjazz.mp3");
-  s1= loadSound("assets/inspire.mp3");
+  s2= loadSound("assets/hipjazz.mp3");
+  s3= loadSound("assets/inspire.mp3");
 }
 function setup() {
   createCanvas(800, 800);
