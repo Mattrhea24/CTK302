@@ -2,11 +2,26 @@ let cars = [];
 let frogPos;
 let state = 0;
 let timer = 0;
-
+let ball1, ball2, ball3, ball4;
+let types = [];
 function setup() {
+ 
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   imageMode(CENTER);
+
+  back = loadImage("assets/bkg1.jpg");
+  over = loadImage("assets/over.png");
+  title = loadImage("assets/title.png");
+  win = loadImage("assets/winner.jpg");
+
+ball1 = loadImage("assets/ball1.png");
+ball2 = loadImage("assets/ball2.png");
+ball3 = loadImage("assets/ball3.jpg");
+ball4 = loadImage("assets/ball4.jpg");
+
+types = [ball1, ball2, ball3, ball4];
+types
 
   // Spawn objects
   for (let i = 0; i < 4; i++) {
@@ -118,15 +133,22 @@ class Car {
     this.b = random(255);
     this.o = random(100);
     this.size = random(48, 128);
-    // this.type = random(3) ;
+    this.type = int(random(types.length));
+     
+
+    if (random(4)> 1){
+      this.img = ball1;
+    } else {
+      this.img = ball2, ball3, ball4;
+    }
   }
   // methods
 
   display() {
     // this can be text, images, or shapes
-    fill(this.r, this.g, this.b, this.o);
-    rect(this.pos.x, this.pos.y, this.size, 25);
-    // image(this.img, this.pos.x, this.pos.y) ;
+    //fill(this.r, this.g, this.b, this.o);
+  //  rect(this.pos.x, this.pos.y, this.size, 25);
+     image(types[this.type], this.pos.x, this.pos.y, 50, 50) ;
   }
 
   move() {
