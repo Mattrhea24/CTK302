@@ -74,7 +74,7 @@ function draw() {
       background('black');
       image(win,400,500);
       textSize(50);
-      text("You Won!",width/2, height/2-150);
+      text("You Are The Rebounding Champion!",width/2, height/2-150);
       text("Click to Restart", width/2, height/2 -100);
       break;
 
