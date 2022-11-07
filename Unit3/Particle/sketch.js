@@ -27,19 +27,22 @@ class Car {
   constructor() {
     this.pos = createVector(width/2, height/2) ;
       // initialize your attributes here
-      this.vel = createVector(random(-3, 3) , height/2)
+      this.vel = createVector(random(-3, 3) , random(-3,3));
     
   }
 
   // methods
 
   display() {
-    rect(this.x, 100, 75, 25);
+    rect(this.pos.x, this.pos.y, 20);
   }
 
   move() {
-    this.x = this.x + 10;
-    if (this.x > width) this.x = 0 ;
+    this.pos.add(this.vel);
+    if (this.x > width) this.pos.x = 0 ;
+    if (this.x < 0) this.pos.x = 0 ;
+    if (this.y > height) this.pos.x = 0 ;
+    if (this.y < 0) this.pos.x = 0 ;
   }
   
 }

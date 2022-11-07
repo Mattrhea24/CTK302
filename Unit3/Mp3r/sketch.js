@@ -194,10 +194,15 @@ function Car(){
 
   //methods
   this.display = function() {
-    fill('grey');
-    ellipse(this.pos.x, this.pos.y, 20, 20);
+    fill('Orange');
+    ellipse(this.pos.x, this.pos.y, 40, 40);
+    rect(this.pos.x, this.pos.y, 1, 37)
+    rect(this.pos.x -10, this.pos.y, 1, 37)
+    rect(this.pos.x + 10, this.pos.y, 1, 37)
+    rect(this.pos.x, this.pos.y, 37, 1)
+    rect(this.pos.x, this.pos.y -10, 37, 1)
+    rect(this.pos.x, this.pos.y +10, 37, 1)
     fill(this.r,this.b,this.g);
-    ellipse(this.pos.x, this.pos.y, 30, 10);
     //rect(this.pos.x, this.pos.y, 50, 50);
   }//end display
 //---------------------------------------------
