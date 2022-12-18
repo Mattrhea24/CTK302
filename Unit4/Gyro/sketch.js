@@ -36,7 +36,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(bunnyImage, 0, +100, 950, 950);
+  image(bunnyImage, 0, +100, 500, 500);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -60,9 +60,9 @@ function draw() {
   // Text that makes CTK type in the background
   fill('yellow');
   stroke("black");
-  textSize(150);
+  textSize(50);
   textAlign(CENTER);
-  text("I'm trapped!", width / 2, height / 1);
+  text("I'm trapped!", width / 2, height / 1.5);
 
 }
 function mousePressed() {
