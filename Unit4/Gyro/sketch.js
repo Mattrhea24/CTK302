@@ -14,21 +14,21 @@ function setup() {
 
 
 
-  bunnyImage = loadImage("assets/Bulls.jpg");
+  bunnyImage = loadImage("assets/stuck.jpg");
   imageMode(CENTER);
   rectMode(CENTER);
-
+  song = loadSound('assets/Mime.mp3');
 }
 
 function draw() {
 
-  background('#c6f5ff'); // light blue
+  background('black'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   xPosition = map(gamma, -60, 60, 0, width);
-  yPosition = map(beta, -30, 30, 0, height);
+  yPosition = map(beta, -30, 90, 0, height);
 
   push(); // before you use translate, rotate, or scale commands, push and then pop after
 
@@ -36,7 +36,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(bunnyImage, 0, 0, 500, 500);
+  image(bunnyImage, 0, +100, 950, 950);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -58,14 +58,22 @@ function draw() {
   // text("z = " + z.toFixed(4), 25, 190);
 
   // Text that makes CTK type in the background
-  fill('white');
-  noStroke();
-  textSize(300);
+  fill('yellow');
+  stroke("black");
+  textSize(150);
   textAlign(CENTER);
-  text("See Red", width / 2, height / 2);
+  text("I'm trapped!", width / 2, height / 1);
 
 }
-
+function mousePressed() {
+  if (song.isPlaying()) {
+    song.stop();
+    background(255, 0, 0);
+  } else {
+    song.play();
+    background(0, 255, 0);
+  }
+};
 
 
 // Read in gyroscope data
