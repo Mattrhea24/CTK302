@@ -60,7 +60,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('yellow');
   stroke("black");
-  textSize(20);
+  textSize(80);
   textAlign(CENTER);
   text("I'm trapped!", width / 2, height / 1.5);
 
